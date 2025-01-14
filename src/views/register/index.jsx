@@ -45,7 +45,7 @@ function RegistrationPage() {
       return people;
     }
 
-    return people.filter((person) => `${person.name.toLowerCase()}`
+    return people.filter((person) => person.name?.toLowerCase()
       .includes(searchValue.toLowerCase()));
   }
 
