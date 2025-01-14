@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --orange: #ff7f50;
+
+  --dark: #333;
+  --light: #ccc;
+  --lighter: #eee;
+
+  --orange-overlay: rgba(255, 127, 80, 0.5);
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+h1 {
+  font-size: 28px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+form button {
+  padding: 12px 64px;
+
+  background-color: var(--orange-overlay);
+  color: var(--dark);
+
+  font-weight: bold;
+
+  border: none;
+  border-radius: 50rem;
+
+  margin-top: 64px;
+}
+
+button,
+a {
+  transition: scale 0.2s;
+}
+
+a:active,
+button:active {
+  scale: 0.95;
+}
+
+input {
+  border: 1px solid var(--light);
+  padding: 12px;
+  border-radius: 50rem;
+
+  font-family: 'Lato', sans-serif;
+}
+
+select {
+  border: 1px solid var(--light);
+  padding: 12px;
+  border-radius: 50rem;
+}
+
+hr {
+  border-top: 1px solid var(--lighter);
+}
+
+ul {
+  list-style: none;
+}

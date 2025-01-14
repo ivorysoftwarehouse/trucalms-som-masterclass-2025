@@ -1,0 +1,40 @@
+.Home {
+  height: 100vh;
+  background-color: var(--white);
+
+  display: grid;
+  place-items: center;
+}
+
+.HomeHeader {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.HomeHeader img {
+  width: 80px;
+}
+
+.HomeLinks {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+
+  width: 80%;
+
+  padding: 16px;
+}
+
+.HomeLinks a,
+.HomeLinks button {
+  background-color: var(--dark);
+  color: var(--white);
+
+  padding: 12px 64px;
+  border-radius: 50rem;
+
+  display: grid;
+  place-content: center;
+}

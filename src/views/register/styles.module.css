@@ -1,0 +1,207 @@
+.RegistrationPage header {
+  background-color: var(--orange-overlay);
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 16px;
+
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--dark);
+
+  position: sticky;
+  top: 0;
+
+  padding: 16px;
+
+  backdrop-filter: blur(8px);
+}
+
+.RegistrationPage header img {
+  width: 50px;
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+}
+
+.RegistrationPage main {
+  display: grid;
+
+  padding: 16px;
+}
+
+.PageHeading {
+  display: grid;
+  gap: 8px;
+
+  margin: 64px 0;
+  text-align: center;
+}
+
+.PageHeadingGroup {
+  border: 8px solid var(--orange-overlay);
+  border-radius: 16px;
+
+  margin-top: 64px;
+}
+
+.PageHeadingListHeading {
+  background-color: var(--orange-overlay);
+  color: var(--dark);
+
+  text-align: left;
+
+  font-weight: bold;
+  font-size: 20px;
+
+  padding: 16px;
+}
+
+.PageHeadingSearch {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 16px;
+
+  background-color: var(--orange-overlay);
+
+  padding: 0 16px 16px;
+}
+
+.PageHeadingSearch img {
+  padding: 12px 0;
+}
+
+.PageHeadingSearch input {
+  border-radius: 8px;
+  border: none;
+  outline: none;
+
+  font-size: 15px;
+
+  padding: 12px;
+}
+
+.PageHeading ul {
+  border-radius: 8px;
+
+  max-height: 300px;
+  overflow-y: auto;
+
+  text-align: left;
+}
+
+.PageHeading ul li {
+  padding: 16px;
+  border-bottom: 1px solid var(--orange-overlay);
+
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  gap: 8px;
+  align-items: center;
+
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.PageHeading ul li button {
+  border: 2px solid var(--orange-overlay);
+  border-radius: 50rem;
+
+  background-color: var(--white);
+  color: var(--orange);
+
+  padding: 8px 24px;
+
+  font-weight: 600;
+}
+
+.PageHeading ul li:last-child {
+  border-bottom: none;
+}
+
+.FormContainer {
+  display: grid;
+  gap: 8px;
+}
+
+.FormContainer h2 {
+  text-align: center;
+
+  font-weight: 500;
+}
+
+.FormContainer > h2 {
+  margin-top: 32px;
+
+  font-weight: bold;
+
+  color: var(--dark);
+}
+
+.FormContainer > p {
+  margin-bottom: 32px;
+
+  font-size: 18px;
+  text-align: center;
+}
+
+.FormContainer form {
+  display: grid;
+  gap: 24px;
+
+  margin: 16px 0;
+
+  border: 4px solid var(--orange-overlay);
+  border-radius: 16px;
+
+  padding: 16px;
+}
+
+.FormContainer form label {
+  display: grid;
+  gap: 8px;
+
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.FormContainer form label div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+
+  width: 100%;
+
+  margin: 8px 0;
+}
+
+.FormContainer form label div input {
+  width: 100%;
+}
+
+.Loader {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+
+  display: grid;
+  place-content: center;
+
+  background-color: var(--orange-overlay);
+}
+
+.Spinner {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 3px;
+  background:
+    radial-gradient(farthest-side, var(--orange) 95%,#0000) 50% 0/12px 12px no-repeat,
+    radial-gradient(farthest-side,#0000 calc(100% - 5px), var(--orange) calc(100% - 4px)) content-box;
+  animation: l6 2s infinite ;
+
+}
+
+@keyframes l6 {to{transform: rotate(1turn)}}

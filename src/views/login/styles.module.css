@@ -1,0 +1,35 @@
+.LoginPage header {
+  background-color: var(--orange);
+  display: grid;
+  place-items: center;
+}
+
+.LoginPage header img {
+  width: 100px;
+}
+
+.LoginPage main {
+  display: grid;
+  gap: 32px;
+
+  padding: 16px;
+}
+
+.PageHeading {
+  display: grid;
+  gap: 8px;
+
+  margin: 32px 0;
+}
+
+.FormContainer {
+  display: grid;
+  gap: 16px;
+}
+
+.FormContainer form {
+  display: grid;
+  gap: 8px;
+
+  margin: 16px 0;
+}
