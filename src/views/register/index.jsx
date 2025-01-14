@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { getPeople, register, setPresent } from '../../firebase'
+import { getPeople, register, setPresent, verify } from '../../firebase'
 import { toTitleCase } from '../../utils';
 
 import styles from './styles.module.css'
@@ -11,6 +11,7 @@ function RegistrationPage() {
   const [message, setMessage] = useState('');
   const [people, setPeople] = useState([]);
   const [searchValue, setSearchValue] = useState('');
+  const [verified, setVerified] = useState(false);
 
   const navigate = useNavigate();
 
@@ -36,6 +37,25 @@ function RegistrationPage() {
           setMessage('An error occurred. Please try again.')
           setLoading(false);
         }
+      }
+    });
+  }
+
+  const handleVerification = (event) => {
+    event.preventDefault();
+
+    const code = event.target.accessCode.value;
+
+    verify(code, (response) => {
+      if (response.success) {
+        setVerified(true);
+      } else {
+        if (response.invalidCode) {
+          setMessage('Invalid access code. Please try again.')
+        } else {
+          setMessage('An error occurred. Please try again.')
+        }
+        setLoading(false);
       }
     });
   }
@@ -66,7 +86,7 @@ function RegistrationPage() {
     })
   }, [])
 
-  return (
+  if (verified) return (
     <div className={styles['RegistrationPage']}>
       <header>
         <img src="favicon.png" alt="logo" />
@@ -176,6 +196,38 @@ function RegistrationPage() {
                 <option value="Sound">Sound</option>
                 <option value="Ushering">Ushering</option>
               </select>
+            </label>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </main>
+    </div>
+  )
+
+  return (
+    <div className={styles['RegistrationPage']}>
+      <header>
+        <img src="favicon.png" alt="logo" />
+        The Truth of Calvary Ministries
+      </header>
+
+      <main>
+        <div className={styles['PageHeading']}>
+          <h1>
+            The School of Money Masterclass
+          </h1>
+          <p>
+            Enter the access code.
+          </p>
+        </div>
+
+        <div className={styles['FormContainer']}>
+          <form onSubmit={handleVerification}>
+            {message && <p>{message}</p>}
+            <label htmlFor="accessCode">
+              Access Code*
+              <input type="number" placeholder="Access Code*" name="accessCode" required />
             </label>
 
             <button type="submit">Submit</button>
