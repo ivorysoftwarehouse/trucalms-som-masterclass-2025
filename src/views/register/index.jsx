@@ -101,7 +101,7 @@ function RegistrationPage() {
 
         <div className={styles['PageHeading']}>
           <h1>
-            Register for The School of Money Masterclass
+            Welcome To The School of Money Masterclass
           </h1>
 
           <div className={styles['PageHeadingGroup']}>
