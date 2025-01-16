@@ -24,11 +24,6 @@ function Home() {
 
   return (
     <div className={styles['Home']}>
-      <div className={styles['HomeHeader']}>
-        <img src="favicon.png" alt="Logo" />
-        <h1>The School Of Money Masterclass (200 Level)</h1>
-      </div>
-
       <div className={styles['HomeLinks']}>
         <Link to="/register">Register</Link>
         {

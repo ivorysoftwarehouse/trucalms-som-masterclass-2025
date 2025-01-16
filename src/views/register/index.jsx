@@ -62,7 +62,7 @@ function RegistrationPage() {
 
   const filterPeople = () => {
     if (searchValue === '') {
-      return people;
+      return [];
     }
 
     return people.filter((person) => person.name?.toLowerCase()
@@ -88,11 +88,6 @@ function RegistrationPage() {
 
   if (verified) return (
     <div className={styles['RegistrationPage']}>
-      <header>
-        <img src="favicon.png" alt="logo" />
-        The Truth of Calvary Ministries
-      </header>
-
       {
         loading && (
           <div className={styles['Loader']}>
@@ -102,9 +97,11 @@ function RegistrationPage() {
       }
 
       <main>
+        <img src="/images/cover.png" />
+
         <div className={styles['PageHeading']}>
           <h1>
-            Welcome to The School of Money Masterclass
+            Register for The School of Money Masterclass
           </h1>
 
           <div className={styles['PageHeadingGroup']}>
@@ -131,20 +128,20 @@ function RegistrationPage() {
                   </li>
                 ))
               }
-              {
+              {/* {
                 filterPeople().length === 0 && (
                   <li>
                     <div>List Empty! Use the form below to register.</div>
                   </li>
                 )
-              }
+              } */}
             </ul>
           </div>
         </div>
 
         <div className={styles['FormContainer']}>
           <h2>First time here?</h2>
-          <p>Fill out the following form to register</p>
+          <p>Fill out the form below to register</p>
 
           {
             message
@@ -207,30 +204,23 @@ function RegistrationPage() {
 
   return (
     <div className={styles['RegistrationPage']}>
-      <header>
-        <img src="favicon.png" alt="logo" />
-        The Truth of Calvary Ministries
-      </header>
-
-      <main>
+      <main className={styles['RegistrationPageAccessChecker']}>
         <div className={styles['PageHeading']}>
+          <img src="favicon.png" alt="logo" />
           <h1>
             The School of Money Masterclass
           </h1>
-          <p>
-            Enter the access code.
-          </p>
+          <p>(200 Level)</p>
         </div>
 
         <div className={styles['FormContainer']}>
           <form onSubmit={handleVerification}>
-            {message && <p>{message}</p>}
+            {message && <p className={styles['Error']}>{message}</p>}
             <label htmlFor="accessCode">
-              Access Code*
-              <input type="number" placeholder="Access Code*" name="accessCode" required />
+              <input placeholder="Access Code" name="accessCode" required />
             </label>
 
-            <button type="submit">Submit</button>
+            <button type="submit">Continue</button>
           </form>
         </div>
       </main>

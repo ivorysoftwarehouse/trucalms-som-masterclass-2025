@@ -35,29 +35,26 @@ function LoginPage() {
 
   return (
     <div className={styles['LoginPage']}>
-      <header>
-        <img src="favicon.png" alt="logo" />
-      </header>
-
       <main>
-        <div className={styles['PageHeading']}>
-          <h1>
-            Login
-          </h1>
-          <p>
-            Enter your details to login to your account.
-          </p>
-        </div>
-
         <div className={styles['FormContainer']}>
-          {message}
-          <hr />
+          <h2>Login</h2>
+
+          {
+            message
+          }
 
           <form onSubmit={handleSubmit}>
-            <input type="email" placeholder="Username" name="email" required />
-            <input type="password" placeholder="Password" name="password" required />
+            <label htmlFor="name">
+              Username
+              <input type="text" placeholder="Username*" name="username" required />
+            </label>
 
-            <button type="submit">Login</button>
+            <label htmlFor="password">
+              Password
+              <input type="password" placeholder="Password*" name="password" required />
+            </label>
+
+            <button type="submit">Submit</button>
           </form>
         </div>
       </main>

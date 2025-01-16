@@ -1,35 +1,113 @@
-.LoginPage header {
-  background-color: var(--orange);
-  display: grid;
-  place-items: center;
+.LoginPage {
+  min-height: 100vh;
 }
 
-.LoginPage header img {
-  width: 100px;
+.Error {
+  color: var(--red);
 }
 
 .LoginPage main {
   display: grid;
-  gap: 32px;
+  gap: 16px;
 
-  padding: 16px;
+  max-width: 500px;
+
+  padding: 64px 16px;
+  margin: 0 auto;
 }
 
-.PageHeading {
-  display: grid;
-  gap: 8px;
-
-  margin: 32px 0;
+.LoginPage main > img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .FormContainer {
   display: grid;
-  gap: 16px;
+  gap: 8px;
+}
+
+.FormContainer h2 {
+  text-align: center;
+
+  font-weight: 500;
+}
+
+.FormContainer > h2 {
+  margin-top: 32px;
+
+  font-weight: bold;
+
+  color: var(--white);
+}
+
+.FormContainer > p {
+  margin-bottom: 32px;
+
+  font-size: 18px;
+  text-align: center;
+
+  color: var(--orange);
 }
 
 .FormContainer form {
   display: grid;
-  gap: 8px;
+  gap: 24px;
 
   margin: 16px 0;
+
+  border-radius: 16px;
+
+  padding: 16px;
 }
+
+.FormContainer form label {
+  display: grid;
+  gap: 16px;
+
+  font-weight: bold;
+
+  color: var(--light);
+}
+
+.FormContainer form label div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+
+  width: 100%;
+
+  margin: 8px 0;
+}
+
+.FormContainer form input,
+.FormContainer form select {
+  border-radius: 8px;
+}
+
+.Loader {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+
+  display: grid;
+  place-content: center;
+
+  background-color: var(--orange-overlay);
+}
+
+.Spinner {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 3px;
+  background:
+    radial-gradient(farthest-side, var(--orange) 95%,#0000) 50% 0/12px 12px no-repeat,
+    radial-gradient(farthest-side,#0000 calc(100% - 5px), var(--orange) calc(100% - 4px)) content-box;
+  animation: l6 2s infinite ;
+
+}
+
+@keyframes l6 {to{transform: rotate(1turn)}}
