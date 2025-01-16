@@ -11,6 +11,8 @@
   place-items: center;
 
   padding: 64px 32px;
+
+  text-align: center;
 }
 
 .RegistrationPageAccessChecker .PageHeading {
