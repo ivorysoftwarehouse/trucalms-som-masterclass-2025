@@ -33,7 +33,7 @@ function Home() {
             <Link to="/login">Login</Link>
         }
 
-        {/* <button onClick={upload}>
+        {/* <button onClick={uploadData}>
           Upload data
         </button> */}
       </div>

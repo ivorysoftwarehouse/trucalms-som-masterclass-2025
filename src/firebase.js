@@ -40,6 +40,7 @@ const register = async (data, callback) => {
   callback({success: true});
 }
 
+
 const login = (email, password, callback) => {
   const auth = getAuth();
   signInWithEmailAndPassword(auth, email, password)
@@ -99,7 +100,7 @@ const getPeople = async () => {
   const db = getFirestore(window.firebaseApp);
 
   let people = await getDocs(collection(db, "people"))
-  people = people.docs.map((person) => person.data())
+  people = people.docs.map((person) => person.data().data)
 
   const attendances = await getAttendances();
 
