@@ -96,3 +96,21 @@ hr {
 ul {
   list-style: none;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  border: 1px solid var(--border);
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+th {
+  background-color: var(--border);
+}

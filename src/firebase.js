@@ -109,6 +109,15 @@ const getPeople = async () => {
   return people;
 }
 
+const getAllPeople = async () => {
+  const db = getFirestore(window.firebaseApp);
+
+  let people = await getDocs(collection(db, "people"))
+  people = people.docs.map((person) => person.data().data)
+
+  return people;
+}
+
 const setPresent = async (phoneNumber, callback) => {
   let date = new Date().toLocaleDateString('en-us', {year:"numeric", month:"numeric", day:"numeric"})
   date = date.replace(/\//g, "-");
@@ -145,6 +154,7 @@ export {
   setupAuthListener,
   verify,
   getPeople,
+  getAllPeople,
   setPresent,
   uploadData,
 }

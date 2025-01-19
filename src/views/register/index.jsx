@@ -191,6 +191,7 @@ function RegistrationPage() {
                 <option value="Protocol">Protocol</option>
                 <option value="Pastorate">Pastorate</option>
                 <option value="Sound">Sound</option>
+                <option value="Sound">Transport Unit</option>
                 <option value="Ushering">Ushering</option>
               </select>
             </label>

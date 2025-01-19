@@ -1,4 +1,6 @@
 .People {
-  padding: 16px;
-  background-color: var(--light);
+  background-color: var(--dark);
+  color: var(--light);
+
+  overflow-x: auto;
 }

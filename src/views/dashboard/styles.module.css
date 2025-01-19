@@ -1,12 +1,12 @@
-.Dashboard {
-  display: grid;
-}
-
 .Dashboard header {
   display: grid;
   place-content: center;
 
-  background-color: red;
+  background-color: var(--yellow);
+  color: var(--white);
+}
+
+.Dashboard h1 {
   color: var(--white);
 }
 
@@ -34,31 +34,13 @@
   transition: scale 0.2s;
 }
 
-.Dashboard ul {
+.Dashboard main h2 {
+  margin: 16px 0;
+}
+
+.Dashboard main {
+  padding: 16px 16px 120px 16px;
+
   display: grid;
-
-  border: 1px solid var(--light);
-  border-radius: 16px;
-
-  margin: 16px;
-}
-
-.Dashboard ul li {
-  border-bottom: 1px solid var(--light);
-}
-
-.Dashboard ul li button {
-  padding: 16px;
-
-  width: 100%;
-
-  background: none;
-
-  text-align: left;
-
-  font-weight: bold;
-}
-
-.Dashboard ul li:last-child {
-  border-bottom: none;
+  gap: 8px;
 }

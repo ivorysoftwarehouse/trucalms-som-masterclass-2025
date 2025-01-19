@@ -45,8 +45,8 @@ function LoginPage() {
 
           <form onSubmit={handleSubmit}>
             <label htmlFor="name">
-              Username
-              <input type="text" placeholder="Username*" name="username" required />
+              Email
+              <input type="text" placeholder="Username*" name="email" required />
             </label>
 
             <label htmlFor="password">
