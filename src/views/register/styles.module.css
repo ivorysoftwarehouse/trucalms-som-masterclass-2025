@@ -37,9 +37,6 @@
 
 .RegistrationPageAccessChecker form button {
   margin: 32px auto;
-
-  background-color: var(--white);
-  color: var(--dark);
 }
 
 .RegistrationPage main {
@@ -120,7 +117,7 @@
 }
 
 .PageHeading ul li {
-  padding: 16px;
+  padding: 32px 16px;
   border-bottom: 1px solid var(--dark-1);
 
   display: grid;

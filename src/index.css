@@ -84,6 +84,9 @@ select {
 
 form button {
   margin-top: 64px;
+
+  background-color: var(--white);
+  color: var(--dark);
 }
 
 hr {
